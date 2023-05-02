@@ -1,0 +1,33 @@
+<ion-spinner  *ngIf="isLoading" class="loading" name="crescent" color="primary"></ion-spinner>
+
+ <ion-content [fullscreen]="true" *ngIf="!isLoading"  style="--background: #f6f6f6;">
+  <ion-header no-border>
+    <ion-toolbar style="--background: #ffff; --border-width: 0;    height: 100px;">
+      <div class="top-title">Your Brand here</div>
+      <div class="top-title-2" >Horoscope</div>
+      </ion-toolbar>
+  </ion-header>
+
+  <div id="container" style="padding-top: 20px;">
+
+ 
+    <ion-list lines="none" style="background: #f6f6f6; ">
+      <ion-item *ngFor="let sign of signs">
+        <ion-grid [routerLink]="['/horoscope-details/'+sign]">
+              <ion-row>
+                <ion-col size="10"> 
+                  <span class="list-header">{{sign}}</span>
+                  <div class="list-header-discription">Get your latest horoscopes, numbers and readings</div>
+                </ion-col>
+                <ion-col>
+                  <ion-icon class="forword-arrow-icon" name="chevron-forward-outline"></ion-icon>
+                </ion-col>
+              </ion-row>
+         </ion-grid>
+      </ion-item>
+
+
+    
+    </ion-list>
+   </div>
+</ion-content>

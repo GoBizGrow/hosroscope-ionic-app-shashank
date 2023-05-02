@@ -1,0 +1,11 @@
+{
+  "name": "horoscope",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [{
+    "path": "/api",
+    "proxyUrl": "https://the-real-api-host.com"
+  }]
+}

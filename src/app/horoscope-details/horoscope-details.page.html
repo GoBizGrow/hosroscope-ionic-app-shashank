@@ -1,0 +1,318 @@
+<ion-content [fullscreen]="true" style="--background: #f6f6f6;">
+  <ion-header no-border>
+    
+    <ion-toolbar style="--background: #ffff; --border-width: 0;    height: 100px;">
+      <div class="top-title">Your Brand here</div>
+      <div class="top-title-2" ><ion-icon [routerLink]="['/home']" style="font-size: 20px; padding-right: 20px;" name="arrow-back-outline"></ion-icon> {{sign}}</div>
+      </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="tab-bar">
+      <ion-grid>
+        <ion-row>
+          <ion-col [ngStyle]="{background: activeTab=='daily'?'#eeeeee':'white'}" (click)="updateTab('daily')" class="right-border" > Daily</ion-col>
+          <ion-col  [ngStyle]="{background: activeTab=='monthly'?'#eeeeee':'white'}"  (click)="updateTab('monthly')"  class="right-border">Monthly</ion-col>
+          <ion-col  [ngStyle]="{background: activeTab=='quarterly'?'#eeeeee':'white'}"  (click)="updateTab('quarterly')"  class="right-border">Quarterly</ion-col>
+          <ion-col  [ngStyle]="{background: activeTab=='yearly'?'#eeeeee':'white'}"  (click)="updateTab('yearly')" >Yearly</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+
+
+    <div class="tab-data" *ngIf="activeTab=='daily'"  >
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Sign</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.Name}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Today</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.Today}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Career</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.career}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Color</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.color}}</ion-card-content>
+      </ion-card>
+
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Finance</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.finance}}</ion-card-content>
+      </ion-card>
+      
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Health And Wellness</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.health_and_wellness}}</ion-card-content>
+      </ion-card>
+            
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Love And Relationships</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.love_and_relationships}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Numbers</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.numbers}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Personal Growth</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.personal_growth}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Social Life</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.social_life}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Todays Affirmation</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{daily.todays_affirmation}}</ion-card-content>
+      </ion-card>
+ 
+
+    </div>
+    <div class="tab-data" *ngIf="activeTab=='monthly'"  >
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Sign</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.Name}}</ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Month</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.Month}}</ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Today</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.Today}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Career</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.career}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Color</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.color}}</ion-card-content>
+      </ion-card>
+
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Finance</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.finance}}</ion-card-content>
+      </ion-card>
+      
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Health And Wellness</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.health_and_wellness}}</ion-card-content>
+      </ion-card>
+            
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Love And Relationships</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.love_and_relationships}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Numbers</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.numbers}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Personal Growth</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.personal_growth}}</ion-card-content>
+      </ion-card>
+
+    
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Todays Affirmation</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{monthly.todays_affirmation}}</ion-card-content>
+      </ion-card>
+ 
+
+    </div>
+    <div class="tab-data" *ngIf="activeTab=='quarterly'"  >
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Sign</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.Name}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Month</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.Month}}</ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Quarterly</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.quarter}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Today</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.Today}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Career</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.career}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Color</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.color}}</ion-card-content>
+      </ion-card>
+
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Finance</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.finance}}</ion-card-content>
+      </ion-card>
+      
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Health And Wellness</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.health_and_wellness}}</ion-card-content>
+      </ion-card>
+            
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Love And Relationships</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.love_and_relationships}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Numbers</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.numbers}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Personal Growth</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.personal_growth}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Social Life</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.social_life}}</ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Todays Affirmation</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.todays_affirmation}}</ion-card-content>
+      </ion-card>
+ 
+
+    </div>
+
+    <div class="tab-data" *ngIf="activeTab=='yearly'"  >
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Sign</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.Name}}</ion-card-content>
+      </ion-card>
+ 
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Today</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.Today}}</ion-card-content>
+      </ion-card>
+ 
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Color</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.color}}</ion-card-content>
+      </ion-card>
+
+
+ 
+
+      <ion-card>
+        <ion-card-header>
+           <ion-card-subtitle>Numbers</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>{{quarterly.numbers}}</ion-card-content>
+      </ion-card>
+
+      
+
+    </div>
+   </div>
+</ion-content>
